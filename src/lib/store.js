@@ -87,9 +87,9 @@ const [useStats] = create((set) => ({
 			secondaryStat: { ...state.secondaryStat, validator: commission },
 		})),
 
-	setEarnedReward: (earnedReward) =>
+	setRewardEarned: (rewardEarned) =>
 		set((state) => ({
-			primaryStat: { ...state.primaryStat, nominator: earnedReward },
+			primaryStat: { ...state.primaryStat, nominator: rewardEarned },
 		})),
 	setNominations: (nominations) =>
 		set((state) => ({

@@ -10,7 +10,7 @@ function TopValidator() {
 		setPoolReward,
 		setCommission,
 		setNominatorIdentity,
-		setEarnedReward,
+		setRewardEarned,
 		setNominations,
 	} = useStats();
 
@@ -24,15 +24,15 @@ function TopValidator() {
 
 	React.useEffect(() => {
 		const stats = getStats("kusama", "nominator");
-		const { name, stashId, earnedReward, nominations } = stats;
+		const { name, stashId, rewardEarned, nominations } = stats;
 		setNominatorIdentity({ name, stashId });
-		setEarnedReward(earnedReward);
+		setRewardEarned(rewardEarned);
 		setNominations(nominations);
-	}, [setNominatorIdentity, setEarnedReward, setNominations]);
+	}, [setNominatorIdentity, setRewardEarned, setNominations]);
 
 	return (
 		<div className="top-validator">
-			<Infographic actor="nominator" network="kusama" />
+			<Infographic actor="nominator" network="polkadot" />
 			<ActorViz actor="nominator" />
 		</div>
 	);

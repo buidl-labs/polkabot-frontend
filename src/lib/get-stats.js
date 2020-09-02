@@ -7,7 +7,6 @@ const getValidatorStats = (network) => {
 		commission: 10,
 	};
 
-	console.log(network);
 	return fakeValidator;
 };
 
@@ -20,7 +19,6 @@ const getNominatorStats = (network) => {
 		nominations: 14,
 	};
 
-	console.log(network);
 	return fakeNominator;
 };
 

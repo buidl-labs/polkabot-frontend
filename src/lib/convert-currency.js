@@ -7,7 +7,9 @@ const convertCurrency = async (value, network) => {
 	);
 	const { kusama, polkadot } = res.data;
 	let convertedValue = null;
-	if (get(network, "name") === "kusama") {console.log(`value: ${value}\nprice:${kusama.usd}`); convertedValue = value * kusama.usd;}
+	if (get(network, "name") === "kusama") {
+		convertedValue = value * kusama.usd;
+	}
 	if (get(network, "name") === "polkadot")
 		convertedValue = value * polkadot.usd;
 	return convertedValue;
