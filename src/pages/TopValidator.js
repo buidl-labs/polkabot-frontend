@@ -2,6 +2,7 @@ import React from "react";
 import Infographic from "components/infographic";
 import getStats from "lib/get-stats";
 import { useStats } from "lib/store";
+import ActorViz from "components/viz";
 
 function TopValidator() {
 	const {
@@ -31,7 +32,8 @@ function TopValidator() {
 
 	return (
 		<div className="top-validator">
-			<Infographic actor="validator" network="kusama" />
+			<Infographic actor="nominator" network="kusama" />
+			<ActorViz actor="nominator" />
 		</div>
 	);
 }
