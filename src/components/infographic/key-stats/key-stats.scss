@@ -1,0 +1,56 @@
+div {
+	&.key-stats-container {
+		position: relative;
+		background-color: white;
+		width: 284px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		margin-top: 3rem;
+		margin-left: 7.5%;
+		padding: 1.5rem 2rem;
+		border-radius: 2rem;
+		border-bottom: 0.5rem solid;
+		border-right: 0.5rem solid;
+		border-color: #e3fafc;
+		.key-stats {
+			h3 {
+				color: #2bcaca;
+				font-size: 1vw;
+				font-weight: bold;
+				letter-spacing: 0.15rem;
+				text-transform: uppercase;
+				margin: 0;
+			}
+			p {
+				margin: 0;
+				&.primary-stat {
+					font-size: 2vw;
+					font-weight: bold;
+				}
+				&.secondary-stat {
+					font-size: 1.5vw;
+					font-weight: bold;
+				}
+				&.primary-stat-fiat {
+					font-size: 1.65vw;
+					font-weight: 600;
+					color: #798594;
+					margin-bottom: 0.5rem;
+				}
+			}
+		}
+		.key-stats-crown {
+			position: absolute;
+			left: 0;
+			top: 0;
+			margin-top: -3rem;
+			margin-left: -2.25rem;
+		}
+	}
+}
+
+.identicon {
+	margin-top: 0.5rem;
+	margin-right: 0.5rem;
+}

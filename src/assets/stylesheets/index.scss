@@ -1,0 +1,22 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: "Inter", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-image: linear-gradient(256.22deg, #092D57 5.89%, #254A75 88.84%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+h1 {
+	font-family: "Spartan", sans-serif;
+	font-weight: 900;
+	font-size: 2.75vw;
+}
+
+.flex {
+	display: flex;
+}
