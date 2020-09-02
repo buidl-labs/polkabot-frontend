@@ -2,6 +2,7 @@ import React from "react";
 import { Stage, Layer, Rect, Text, Circle } from "react-konva";
 import Validators from "./Validators";
 import Network from "../Network";
+import { filter } from "lodash";
 
 class NominatorApp extends React.Component {
 	constructor() {
@@ -57,8 +58,10 @@ class NominatorApp extends React.Component {
 						<Validators
 							colorMode={this.props.colorMode}
 							validatorsInfo={
-								this.state.nominatorData &&
-								this.state.nominatorData.validatorsInfo
+								this.props.nominatorData &&
+								filter(this.props.nominatorData.validatorsInfo, {
+									isElected: true,
+								})
 							}
 							x={width / 2}
 							y={height / 4 - nominatorRectangleHeight / 2}

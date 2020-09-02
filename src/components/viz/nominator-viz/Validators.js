@@ -3,16 +3,15 @@ import Rectangleandlines from "./Rectangleandlines";
 
 class Validators extends React.Component {
 	render() {
-		if (this.props.validatorsInfo || true) {
+		if (this.props.validatorsInfo) {
 			let arr1 = [];
-			let testArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
 			let radius = 160;
 			let angle = (2 / 3) * Math.PI;
 			let maxAngle = (2 / 3) * Math.PI;
 
-			testArr.forEach((validator, index) => {
-				angle += maxAngle / (testArr.length + 1);
+			this.props.validatorsInfo.forEach((validator, index) => {
+				angle += maxAngle / (this.props.validatorsInfo.length + 1);
 				arr1.push(
 					<Rectangleandlines
 						key={index}
