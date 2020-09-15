@@ -8,32 +8,30 @@ import axios from "axios";
 
 import "./viz.scss";
 
-const topValidatorStashId = "FUfXiFsaoWbUeaWiWBDizP7VbTSLxMirbJEpLAk1g6YueJp";
-const topNominatorStashId = "Eksmah4LfMN3wbVggUxftDnFr8J2sGhKUV84Yw7QHsox1iN";
-
-const ActorViz = ({ actor }) => {
+const ActorViz = ({ actor, stashId }) => {
 	const { acceptedActors } = useAcceptedInputs();
 	if (!includes(acceptedActors, actor)) throw actorNotAccepted(actor);
 
 	const [validatorData, setValidatorData] = React.useState();
 	const [nominatorData, setNominatorData] = React.useState();
 
+	console.log(stashId);
+
 	React.useEffect(() => {
-		axios
-			.get(
-				`https://yieldscan-api.onrender.com/api/validator/${topValidatorStashId}`
-			)
-			.then(({ data }) => {
-				setValidatorData(data);
-			});
+		if (actor === "validator" && stashId !== undefined) {
 			axios
-				.get(
-					`https://yieldscan-api.onrender.com/api/user/${topNominatorStashId}`
-				)
+				.get(`https://yieldscan-api.onrender.com/api/validator/${stashId}`)
+				.then(({ data }) => {
+					setValidatorData(data);
+				});
+		} else if (actor === "nominator" && stashId !== undefined) {
+			axios
+				.get(`https://yieldscan-api.onrender.com/api/user/${stashId}`)
 				.then(({ data }) => {
 					setNominatorData(data);
 				});
-	}, []);
+		}
+	}, [actor, stashId]);
 
 	return actor === "validator" ? (
 		<ValidatorViz validatorData={validatorData} networkName="KUSAMA NETWORK" />

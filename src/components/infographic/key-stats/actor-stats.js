@@ -26,7 +26,7 @@ const ActorStats = ({ network, actor }) => {
 			</p>
 			<p className="primary-stat-fiat">${primaryStatFiat.toFixed(2)}</p>
 			<h3>{get(secondaryStatTitle, actor)}</h3>
-			<p className="secondary-stat">{get(secondaryStat, actor)}</p>
+			<p className="secondary-stat">{`${get(secondaryStat, actor)}%`}</p>
 		</div>
 	);
 };
