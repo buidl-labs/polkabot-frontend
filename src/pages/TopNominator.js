@@ -1,41 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Infographic from "components/infographic";
-import getStats from "lib/get-stats";
 import { useStats } from "lib/store";
 import ActorViz from "components/viz";
 
-function TopValidator() {
-	const {
-		setValidatorIdentity,
-		setPoolReward,
-		setCommission,
-		setNominatorIdentity,
-		setRewardEarned,
-		setNominations,
-	} = useStats();
+function TopNominator() {
+	const [data, setData] = useState();
+	const { setNominatorIdentity, setRewardEarned, setNominations } = useStats();
 
-	React.useEffect(() => {
-		const stats = getStats("kusama", "validator");
-		const { name, stashId, poolReward, commission } = stats;
-		setValidatorIdentity({ name, stashId });
-		setPoolReward(poolReward);
-		setCommission(commission);
-	}, [setValidatorIdentity, setPoolReward, setCommission]);
+	useEffect(() => {
+		axios
+			.get("https://yieldscan-api.onrender.com/api/twitter/top-nominator")
+			.then(({ data }) => {
+				setData(data);
+			});
+	}, []);
 
-	React.useEffect(() => {
-		const stats = getStats("kusama", "nominator");
-		const { name, stashId, rewardEarned, nominations } = stats;
-		setNominatorIdentity({ name, stashId });
-		setRewardEarned(rewardEarned);
-		setNominations(nominations);
-	}, [setNominatorIdentity, setRewardEarned, setNominations]);
+	console.log(data);
 
-	return (
+	useEffect(() => {
+		if (data) {
+			setNominatorIdentity({ name: data.nomId, stashId: data.nomId });
+			setRewardEarned(data.nomEraReward.toFixed(3));
+			setNominations(data.nominations);
+		}
+	}, [data, setNominatorIdentity, setRewardEarned, setNominations]);
+
+	return data ? (
 		<div className="top-validator">
 			<Infographic actor="nominator" network="kusama" />
-			<ActorViz actor="nominator" />
+			<ActorViz actor="nominator" stashId={data.nomId} />
 		</div>
-	);
+	) : null;
 }
 
-export default TopValidator;
+export default TopNominator;

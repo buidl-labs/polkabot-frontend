@@ -15,6 +15,7 @@ const ActorViz = ({ actor, stashId }) => {
 	const [validatorData, setValidatorData] = React.useState();
 	const [nominatorData, setNominatorData] = React.useState();
 
+	console.log("stashId");
 	console.log(stashId);
 
 	React.useEffect(() => {
