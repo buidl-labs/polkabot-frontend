@@ -8,13 +8,10 @@ const ActorIdentity = ({ network, actor }) => {
 		identity: { name, stashId },
 	} = useStats();
 
-	console.log("name");
-	console.log(name);
-	console.log("stashId");
-	console.log(stashId);
-
 	let actorIdentity =
-		get(name, actor) !== null ? get(name, actor) : get(stashId, actor);
+		get(name, actor) !== (null || undefined)
+			? get(name, actor)
+			: get(stashId, actor);
 
 	console.log(actorIdentity);
 	if (actorIdentity) {
