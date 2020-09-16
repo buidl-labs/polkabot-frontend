@@ -6,13 +6,13 @@ const convertCurrency = async (value, network) => {
 		"https://api.coingecko.com/api/v3/simple/price?ids=kusama%2Cpolkadot&vs_currencies=usd"
 	);
 	const { kusama, polkadot } = res.data;
-	let convertedValue = null;
 	if (get(network, "name") === "kusama") {
-		convertedValue = value * kusama.usd;
+		console.log("hello kusama: " + value);
+		return value * kusama.usd;
+	} else if (get(network, "name") === "polkadot") {
+		console.log("hello polkadot: " + value);
+		return value * polkadot.usd;
 	}
-	if (get(network, "name") === "polkadot")
-		convertedValue = value * polkadot.usd;
-	return convertedValue;
 };
 
 export default convertCurrency;
