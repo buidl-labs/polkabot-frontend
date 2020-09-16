@@ -1,6 +1,50 @@
+# PolkaBot Twitter Frontend
+
+This is a submodule for our [PolkaBot Twitter](https://github.com/buidl-labs/polkabot-twitter) repo which generates amazing vizualization for different actors in the Polkadot system.
+
+## Table of contents
+
+- [Currently supported networks](#supported_networks)
+- [Development](#development)
+  - [Installation Instructions](#installation)
+- [Additional Info](#additional_info)
+- [Gratitude](#gratitude)
+
+## Currently supported networks <a name = "supported_networks"></a>
+
+- [Kusama Network](https://kusama.network/)
+
+## Development <a name = "development"></a>
+
+### Getting Started
+
+- Clone the repository:
+  ```bash
+  git clone https://github.com/buidl-labs/polkabot-frontend.git
+  ```
+- cd into the main folder:
+
+  ```bash
+  cd polkabot-frontend
+  ```
+
+- Install the dependencies with:
+
+  ```
+  yarn
+  ```
+
+- Run the development server:
+
+  ```bash
+  yarn start
+  ```
+
+## Additional Info
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -37,8 +81,12 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Gratitude <a name = "gratitude"></a>
+
+![](https://github.com/buidl-labs/polkadot-chains-indexer/blob/master/.github/web3%20foundation_grants_badge_black.png)
