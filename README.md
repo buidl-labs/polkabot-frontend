@@ -1,6 +1,6 @@
 # PolkaBot Twitter Frontend
 
-This is a submodule for our [PolkaBot Twitter](https://github.com/buidl-labs/polkabot-twitter) repo which generates amazing vizualization for different actors in the Polkadot system.
+This is a submodule for our [PolkaBot Twitter](https://github.com/buidl-labs/polkabot-twitter) repo which generates insightful vizualization for different actors in the Polkadot ecosystem.
 
 ## Table of contents
 
