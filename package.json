@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@polkadot/react-identicon": "^0.58.1",
+    "@polkadot/react-identicon": "^0.59.1",
     "@polkadot/util": "^3.4.1",
     "@polkadot/util-crypto": "^3.4.1",
     "@testing-library/jest-dom": "^5.11.4",

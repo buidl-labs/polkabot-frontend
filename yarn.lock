@@ -1402,31 +1402,31 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@polkadot/react-identicon@^0.58.1":
-  version "0.58.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/react-identicon/-/react-identicon-0.58.1.tgz#cf637adb2dc8a3b0028f5388fdc196afdabea787"
-  integrity sha512-vEoz8TX2Xz2wsOIvp1b0DJw3UrYwISJ6vKLLbUfCjT1nnu32nwOzT2beozOwDSi4u950+Ns5HhBSv+i2akPYZA==
+"@polkadot/react-identicon@^0.59.1":
+  version "0.59.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/react-identicon/-/react-identicon-0.59.1.tgz#1e7554e61a34d9bffd59f64a166a2c835011a71e"
+  integrity sha512-i4vDd8XXjjCmL84VbPUllRVEXyKofemPCutySqXgvAG4C275qiBHd4MZA50SXiEF7AZdrxjS9bCjemGB0XRdEQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@polkadot/ui-settings" "0.58.1"
-    "@polkadot/ui-shared" "0.58.1"
+    "@polkadot/ui-settings" "0.59.1"
+    "@polkadot/ui-shared" "0.59.1"
     color "^3.1.2"
     jdenticon "2.2.0"
     react-copy-to-clipboard "^5.0.2"
 
-"@polkadot/ui-settings@0.58.1":
-  version "0.58.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/ui-settings/-/ui-settings-0.58.1.tgz#7bcb751b81d12b75071961870f3d488743f6660c"
-  integrity sha512-25y/Qse7La01LcNYXF1EAuv5otKbD5LSK1pggIe8D8aR/UXYXw0M3dDT1bqa5olJ3eHSoNwkz9kR+HOgTy5zvw==
+"@polkadot/ui-settings@0.59.1":
+  version "0.59.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/ui-settings/-/ui-settings-0.59.1.tgz#0bfdebf99ac51fc3473e799b7892f8bc87126755"
+  integrity sha512-PgiuDE48K+vvvmJVZ/oAB1O+DO6RtDFhX95MBSKhiGvzUVB5MVY6MKgGXlun89QW6QijqKA03OY48ccsyOV42g==
   dependencies:
     "@babel/runtime" "^7.11.2"
-    eventemitter3 "^4.0.6"
+    eventemitter3 "^4.0.7"
     store "^2.0.12"
 
-"@polkadot/ui-shared@0.58.1":
-  version "0.58.1"
-  resolved "https://registry.yarnpkg.com/@polkadot/ui-shared/-/ui-shared-0.58.1.tgz#1e343497d7a93f2650ef35c07334dec5902cd113"
-  integrity sha512-tC9t0wikbsm7yefpXliACOzyJHzlMG1EzRDn3slclnVEPEZgeBFSzj92MMXOpbZDtWEJ98sLocXotYJUYbfs0w==
+"@polkadot/ui-shared@0.59.1":
+  version "0.59.1"
+  resolved "https://registry.yarnpkg.com/@polkadot/ui-shared/-/ui-shared-0.59.1.tgz#a90c6e791e27660acfd37ffd5015ed53ba083ba5"
+  integrity sha512-jkWK1PhqLgdYrOI0rkQcHqLdok5J3BOV6uBI+iLfxAq+qkDBjtq4jGJDRbJR8/1axjgNE2+drRUXvhUtE2lZSQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
     color "^3.1.2"
@@ -4506,7 +4506,7 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-eventemitter3@^4.0.0, eventemitter3@^4.0.6:
+eventemitter3@^4.0.0, eventemitter3@^4.0.7:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
